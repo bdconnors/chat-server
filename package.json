@@ -1,0 +1,28 @@
+{
+  "name": "chat-server",
+  "version": "1.0.0",
+  "description": "chat server and client-side connection made with socket.io and mongoose",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd src/scripts/start 8080",
+    "test": "cd src/scripts/test && test-client-conn localhost 8080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bdconnors/chat-server.git"
+  },
+  "keywords": [
+    "chat",
+    "server"
+  ],
+  "author": "Brandon Connnors <bdc5435@rit.edu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bdconnors/chat-server/issues"
+  },
+  "homepage": "https://github.com/bdconnors/chat-server#readme",
+  "dependencies": {
+    "mongoose": "^5.9.16",
+    "socket.io": "^2.3.0"
+  }
+}
