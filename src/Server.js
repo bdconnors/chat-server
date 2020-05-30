@@ -1,15 +1,23 @@
 const Message = require('./Message');
+const io = require('socket.io');
+const http = require('http');
 
 class Server{
-    constructor(io,db){
+    constructor(db,port){
+        this.port = port;
         this.db = db;
-        this.io = io;
+        this.http = null;
+        this.io = null;
         this.connections = {};
     }
     async init() {
+        await this.db.connect();
+        this.http = http.createServer().listen(this.port);
+        this.io = io(this.http);
         this.io.on("connection",this.connection.bind(this));
     }
     async connection(socket){
+        const msgs = await this.db.getAll();
         console.log('new client connection');
         this.connections[socket.id] = socket;
         socket.on("submit",(data)=>{
@@ -26,6 +34,7 @@ class Server{
         socket.on("disconnect",()=>{
             delete this.connections[socket.id];
         });
+        socket.emit("load",msgs);
     }
 
 }

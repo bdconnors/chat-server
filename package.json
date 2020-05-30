@@ -1,15 +1,11 @@
 {
-  "name": "simple-chat-socket-interface",
-  "version": "1.0.0",
-  "description": "chat server and client-side connection made with socket.io and mongoose",
+  "name": "simple-socket-chat-server",
+  "version": "1.0.5",
+  "description": "chat server with socket.io and mongoose",
   "main": "index.js",
-  "scripts": {
-    "start": "cd src/scripts/start 8080",
-    "test": "cd src/scripts/test && test-client-conn localhost 8080"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bdconnors/simple-chat-socket-interface.git"
+    "url": "git+https://github.com/bdconnors/simple-socket-chat-server.git"
   },
   "keywords": [
     "chat",
@@ -18,9 +14,9 @@
   "author": "Brandon Connnors <bdc5435@rit.edu>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bdconnors/simple-chat-socket-interface/issues"
+    "url": "https://github.com/bdconnors/simple-socket-chat-server/issues"
   },
-  "homepage": "https://github.com/bdconnors/simple-chat-socket-interface#readme",
+  "homepage": "https://github.com/bdconnors/simple-socket-chat-server#readme",
   "dependencies": {
     "mongoose": "^5.9.16",
     "socket.io": "^2.3.0"
