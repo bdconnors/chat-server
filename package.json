@@ -1,6 +1,6 @@
 {
   "name": "simple-socket-chat-server",
-  "version": "1.0.5",
+  "version": "1.0.0",
   "description": "chat server with socket.io and mongoose",
   "main": "index.js",
   "repository": {
